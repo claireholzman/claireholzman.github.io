@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-image: url("hockeygame.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container {
+    position: relative;
+    max-width: 800px;
+}
+.image {
+    width: 100%;
+    display: block;
+}
+.overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.scoreboard {
+    bottom: 100px;
+    position: top center;
+    width: 600px;
+    height: auto;
+    background: none;
+}
+.nhl-logo {
+    top: 220px;
+    position: bottom right;
+    right: -400px;
+    width: 200px;
+    height: auto;
+    background: none;
+}
+
