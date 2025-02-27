@@ -1,0 +1,69 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2a2d34; 
+    color: hotpink;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: yellowgreen;
+}
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(10, 65, 19);
+    transition: color 0.3s; 
+}
+
+nav a:hover {
+    color: aquamarine;
+}
+
+
+img{
+    width: auto;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5)
+}
+
+#red-ball{
+    background-color: crimson;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+    animation: moveAround 5s infinite;
+}
+
+@keyframes moveAround {
+    0% {
+        top: 10vh;
+        left: 10vw;
+    }
+    25% {
+        top: 10vh;
+        left: 80vw;
+    }
+    50% {
+        top: 80vh;
+        left: 80vw;
+    }
+    75% {
+        top: 80vh;
+        left: 10vw;
+    }
+    100% {
+        top: 10vh;
+        left: 10vw;
+    }
+}
