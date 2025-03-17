@@ -2,10 +2,11 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0d0d0d;
+    background-color: #1a1a2e;
     color: #ffffff;
     line-height: 1.6;
 }
+
 .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -14,36 +15,66 @@ body {
     max-width: 1200px;
     margin: auto;
 }
+
 .concert {
-    background: #222831;
+    background: #16213e;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
-    border-left: 5px solid #55ebff;
+    border-left: 5px solid #ffcc00;
 }
+
 .concert:hover {
     transform: scale(1.02);
-    background: #393e46;
+    background: #0f3460;
 }
+
 h1, h2 {
     text-align: center;
-    color: #e9f939;
+    color: #ffcc00;
 }
+
 h3 {
-    color: #f48cd3;
+    color: #ff4c29;
 }
+
 p {
     font-size: 16px;
     color: #d3d3d3;
 }
+
+.full-description {
+    display: block;
+    font-style: italic;
+    color: #b0c4de;
+    margin-top: 10px;
+}
+
 @media (min-width: 800px) {
     .container {
         grid-template-columns: 1fr 1fr;
     }
 }
+
 @media (min-width: 1500px) {
     .container {
         grid-template-columns: 1fr 1fr 1fr;
     }
+}
+
+/* Ensure full concert descriptions display properly */
+.concert p {
+    margin-bottom: 10px;
+}
+
+.concert strong {
+    color: #ffcc00;
+}
+
+.concert .full-description {
+    display: block;
+    font-style: italic;
+    color: #b0c4de;
+    white-space: pre-line;
 }
