@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICA10 - Interactive Elements</title>
+    <style>
+        #colorBox {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin-bottom: 20px;
+        }
+        #message {
+            font-size: 20px;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Interactive Page for ICA10</h1>
+
+    <!-- Interactive element 1: A box that changes color when clicked -->
+    <div id="colorBox"></div>
+
+    <!-- Interactive element 2: A button that changes text content when clicked -->
+    <button id="changeTextButton">Click me to change text</button>
+    <p id="message">This is the initial message. Click the button to change it!</p>
+
+    <script>
+        // Event Listener 1: Changes the color of the box when clicked
+        document.getElementById('colorBox').addEventListener('click', function() {
+            let colors = ['lightblue', 'lightgreen', 'lightcoral', 'lightyellow'];
+            let randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.getElementById('colorBox').style.backgroundColor = randomColor;
+        });
+
+        // Event Listener 2: Changes the text content every time the button is clicked
+        const messages = [
+            'This is the initial message. Click the button to change it!',
+            'You clicked the button! The text has changed.',
+            'Great job! Keep clicking the button for more text changes.',
+            'You are making progress. Here is another message!'
+        ];
+        let messageIndex = 0;
+
+        document.getElementById('changeTextButton').addEventListener('click', function() {
+            messageIndex = (messageIndex + 1) % messages.length;  // Loop through messages
+            document.getElementById('message').textContent = messages[messageIndex];
+        });
+    </script>
+
+</body>
+</html>
+
