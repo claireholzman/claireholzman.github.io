@@ -1,0 +1,111 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(to bottom right, #e1d5c9, #f8f4e1);
+  color: #2c2c2c;
+  height: 100vh;
+}
+
+.app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  background: #fffaf2;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+header {
+  background-color: #c0392b;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.quotes {
+  padding: 30px 50px;
+  min-height: 200px;
+}
+
+.quote-text, #js-answer-text {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+#js-answer-text {
+  color: #006400;
+  font-weight: bold;
+}
+
+.controls {
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.button {
+  display: block;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.new-quote {
+  background-color: #4a2b0f;
+}
+
+.new-quote:hover {
+  background-color: #6d3b0e;
+}
+
+.twitter {
+  background-color: #1da1f2;
+}
+
+.twitter:hover {
+  background-color: #0d8ddc;
+}
+
+.new-quote:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    width: 90%;
+  }
+
+  .quote-text {
+    font-size: 20px;
+  }
+
+  .controls {
+    padding: 15px 30px;
+  }
+}
