@@ -12,17 +12,14 @@ async function getQuote() {
   document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 
   try {
-    const response = await fetch("https://zenquotes.io/api/quotes");
+    const response = await fetch("https://api.quotable.io/random");
     const data = await response.json();
-    const randomIndex = Math.floor(Math.random() * data.length);
-    const quote = data[randomIndex].q;
-    const author = data[randomIndex].a;
 
-    quoteText.textContent = `"${quote}"`;
-    authorText.textContent = `— ${author}`;
-    tweetBtn.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`"${quote}" — ${author}`)}`;
+    quoteText.textContent = `"${data.content}"`;
+    authorText.textContent = `— ${data.author}`;
+    tweetBtn.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`"${data.content}" — ${data.author}`)}`;
   } catch (error) {
-    console.error("Error fetching quote:", error);
+    console.error("Fetch error:", error);
     quoteText.textContent = "Oops! Something went wrong.";
     authorText.textContent = "";
   } finally {
@@ -36,3 +33,4 @@ tweetBtn.addEventListener("click", () => {
 });
 
 getQuote();
+
