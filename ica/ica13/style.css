@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+  }
+  
+  h1 {
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  
